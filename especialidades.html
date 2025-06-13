@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="ginecologia, mastologia, paaf, core-biopsy" />
+  <title>Especialidades | CLIMAMA</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+
+ 
+</head>
+<body>
+
+  <div id="navigation">
+    <button id="nav-toggle">☰</button>
+    <ul id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="especialidades.html">Especialidades</a></li>
+      <li><a href="profissionais.html">Profissionais</a></li>
+      <li><a href="artigos.html">Artigos</a></li>
+      <li><a href="galeria.html">Galeria</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+    <button id="dark-mode-btn">🌙</button>
+  </div>
+
+  <div class="main">
+    <h1>Especialidades</h1>
+    <div class="profile-section">
+      <div class="profile-image">
+        <img src="img/logo1.png" alt="Logo da CLIMAMA">
+      </div>
+      <div class="profile-text">
+        <p><strong>Mastologia</strong> e <strong>Tocoginecologia</strong> são especialidades médicas distintas, mas atuam em conjunto para oferecer cuidado completo à saúde da mulher.</p>
+        <p>A mastologia concentra-se na saúde das mamas, abrangendo prevenção, diagnóstico e tratamento de doenças como o câncer de mama, além de condições benignas como cistos, nódulos e inflamações.</p>
+        <p>Já a tocoginecologia (ginecologia e obstetrícia) trata da saúde reprodutiva e sexual da mulher, incluindo gestação, parto, puerpério, contracepção, infertilidade e doenças do trato genital feminino.</p>
+        <p>Na CLIMAMA, também realizamos procedimentos como a <strong>Punção Aspirativa por Agulha Fina</strong> (PAAF) e a <strong>Core-Biopsy</strong>, técnicas minimamente invasivas que permitem a coleta de amostras celulares ou de tecidos.</p>
+        <p>A diferença está no tipo de agulha utilizada: a <strong>PAAF</strong> usa uma agulha fina para extrair células e líquidos; a <strong>Core-Biopsy</strong> utiliza uma agulha mais grossa para obter fragmentos de tecido. A escolha depende do tipo de lesão e da necessidade de análise citológica ou histopatológica.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="rodape">
+    © 2025 CLIMAMA - Todos os direitos reservados. Desenvolvido por <a href="https://github.com/maryrubert" target="_blank">MG Developer</a>.
+  </div>
+
+  <script>
+    const toggleButton = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    toggleButton.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navMenu.classList.remove('show'));
+    });
+
+    const darkModeBtn = document.getElementById('dark-mode-btn');
+    darkModeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>

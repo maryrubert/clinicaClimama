@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="CLIMAMA, galeria, fotos, carrossel" />
+  <title>Galeria de Fotos - CLIMAMA</title>
+   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:wght@400;700&display=swap" rel="stylesheet" />
+  
+</head>
+<body>
+  <div id="navigation">
+    <button id="nav-toggle">☰</button>
+    <ul id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="especialidades.html">Especialidades</a></li>
+      <li><a href="profissionais.html">Profissionais</a></li>
+      <li><a href="artigos.html">Artigos</a></li>
+      <li><a href="galeria.html">Galeria</a></li>
+      <li><a href="contato.html">Contato</a></li>      
+    </ul>
+    <button id="dark-mode-btn">🌙</button>
+  </div>
+
+  <div class="main">
+    <h1>Galeria de Fotos</h1>
+
+    <div class="carousel-container">
+      <div class="carousel-slide" id="carousel">
+        <div class="carousel-page">
+          <img src="img/foto1.png" alt="Foto 1" />
+          <img src="img/foto1.png" alt="Foto 2" />
+        </div>
+        <div class="carousel-page">
+          <img src="img/foto1.png" alt="Foto 3" />
+          <img src="img/foto1.png" alt="Foto 4" />
+        </div>
+        <div class="carousel-page">
+          <img src="img/foto5.jpg" alt="Foto 5" />
+          <img src="img/foto6.jpg" alt="Foto 6" />
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-buttons">
+      <button onclick="prevSlide()">⟨ Anterior</button>
+      <button onclick="nextSlide()">Próxima ⟩</button>
+    </div>
+  </div>
+
+  <div id="rodape">
+    © 2025 CLIMAMA - Todos os direitos reservados. Desenvolvido por <a href="https://github.com/maryrubert" target="_blank">MG Developer</a>.
+  </div>
+
+  <script>
+    const toggleButton = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    toggleButton.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navMenu.classList.remove('show'));
+    });
+
+    const darkModeBtn = document.getElementById('dark-mode-btn');
+    darkModeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+
+    // Carrossel de páginas
+    const carousel = document.getElementById('carousel');
+    const totalPages = carousel.children.length;
+    let pageIndex = 0;
+
+    function showPage(i) {
+      pageIndex = (i + totalPages) % totalPages;
+      carousel.style.transform = `translateX(-${pageIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+      showPage(pageIndex + 1);
+    }
+
+    function prevSlide() {
+      showPage(pageIndex - 1);
+    }
+
+    setInterval(nextSlide, 10000); // troca automática a cada 10s
+  </script>
+</body>
+</html>

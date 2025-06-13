@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="ginecologia, mastologia, paaf" />
+  <title>CLIMAMA</title>
+<link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+
+ 
+</head>
+<body>
+
+  <div id="navigation">
+    <button id="nav-toggle">☰</button>
+    <ul id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="especialidades.html">Especialidades</a></li>
+      <li><a href="profissionais.html">Profissionais</a></li>
+      <li><a href="artigos.html">Artigos</a></li>
+      <li><a href="galeria.html">Galeria</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+    <button id="dark-mode-btn">🌙</button>
+  </div>
+
+  <div class="main">
+    <h1>20 anos de cuidado, confiança e compromisso com a saúde da mulher</h1>
+    <div class="profile-section">
+      <div class="profile-image">
+        <img src="img/logo1.png" alt="Logo da CLIMAMA">
+      </div>
+      <div class="profile-text">
+        <p>Há duas décadas, nasceu um sonho: o de construir um espaço onde cada mulher pudesse encontrar acolhimento, respeito e excelência no cuidado com sua saúde. Hoje, celebramos 20 anos da Climama, referência no cuidado especializado das mamas e na atenção integral à saúde feminina.</p>
+        <p>Foram anos de conquistas, aprendizados e evolução constante. Ao longo desse tempo, acompanhamos gerações de mulheres — mães, filhas, avós — oferecendo não apenas diagnósticos precisos e tratamentos atualizados, mas também escuta sensível, orientação humana e presença verdadeira em todos os momentos da jornada.</p>
+        <p>Desde o início, nosso compromisso com a mastologia foi claro: investir em tecnologia, capacitação e, acima de tudo, em relações de confiança. Tornamo-nos referência não apenas pelos resultados, mas por entender que cada paciente é única, e que por trás de cada exame existe uma história, um medo, uma esperança.</p>
+        <p>Nestes 20 anos, centenas de mulheres foram acolhidas, acompanhadas e curadas. E cada uma delas deixou sua marca em nossa história — nos ensinando, inspirando e fortalecendo nossa missão.</p>
+        <p>O futuro nos espera com ainda mais desafios e, também, com a certeza de que seguiremos com o mesmo propósito: cuidar da mulher com excelência, carinho e respeito — como se fosse única. Porque para nós, ela é.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="rodape">
+    © 2025 CLIMAMA - Todos os direitos reservados. Desenvolvido por <a href="https://github.com/maryrubert" target="_blank">MG Developer</a>.
+  </div>
+
+  <!--Script-->
+
+  <script>
+    const toggleButton = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    toggleButton.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navMenu.classList.remove('show'));
+    });
+
+    const darkModeBtn = document.getElementById('dark-mode-btn');
+    darkModeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>

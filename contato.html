@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="ginecologia, mastologia, contato, CLIMAMA" />
+  <title>CLIMAMA</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+
+  </head>
+<body>
+
+  <div id="navigation">
+    <button id="nav-toggle">☰</button>
+    <ul id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="especialidades.html">Especialidades</a></li>
+      <li><a href="profissionais.html">Profissionais</a></li>
+      <li><a href="artigos.html">Artigos</a></li>
+      <li><a href="galeria.html">Galeria</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+    <button id="dark-mode-btn">🌙</button>
+  </div>
+
+  <div class="main">
+    <h1>Fale Conosco</h1>
+    <div class="profile-section">
+      <div class="profile-image">
+        <img src="img/logo1.png" alt="Logo da CLIMAMA" />
+      </div>
+      <div class="profile-text">
+        <p>Estamos à disposição para tirar dúvidas, agendar consultas e oferecer mais informações sobre nossos serviços. Entre em contato conosco pelos canais abaixo:</p>
+        <p><strong>Telefone:</strong> (16) 3336-2047</p>
+        <p><strong>E-mail:</strong> climamaclinica@gmail.com</p>
+        <p><strong>Endereço:</strong> Av. Cristovão Colombo, 851 - Centro, Araraquara - SP</p>
+        <p><strong>Horário de Atendimento:</strong> Segunda a sexta, das 8h às 11h e das 13h às 18h</p>
+
+        <div class="social-links">
+          <a href="https://wa.me/5511912345678" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+          <a href="https://www.instagram.com/sua_clinica" target="_blank" rel="noopener noreferrer">📷 Instagram</a>
+        </div>
+
+        <div class="map-container" aria-label="Mapa com a localização da CLIMAMA">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3704.879202629957!2d-48.179649500000004!3d-21.7849357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8f15fdff3e721%3A0xbc42d478d298f928!2sClimama!5e0!3m2!1spt-BR!2sbr!4v1749823903097!5m2!1spt-BR!2sbr"
+             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+           title="Mapa da localização da CLIMAMA"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="rodape">
+    © 2025 CLIMAMA - Todos os direitos reservados. Desenvolvido por <a href="https://github.com/maryrubert" target="_blank" rel="noopener noreferrer">MG Developer</a>.
+  </div>
+
+  <script>
+    const toggleButton = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    toggleButton.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navMenu.classList.remove('show'));
+    });
+
+    const darkModeBtn = document.getElementById('dark-mode-btn');
+    darkModeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>
