@@ -4,12 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="keywords" content="CLIMAMA, galeria, fotos, carrossel" />
-  <title>Galeria de Fotos - CLIMAMA</title>
+  <title>CLIMAMA</title>
    <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:wght@400;700&display=swap" rel="stylesheet" />
   
 </head>
 <body>
+
   <div id="navigation">
     <button id="nav-toggle">☰</button>
     <ul id="nav-menu">
@@ -18,35 +19,28 @@
       <li><a href="profissionais.html">Profissionais</a></li>
       <li><a href="artigos.html">Artigos</a></li>
       <li><a href="galeria.html">Galeria</a></li>
-      <li><a href="contato.html">Contato</a></li>      
+      <li><a href="contato.html">Contato</a></li>
     </ul>
     <button id="dark-mode-btn">🌙</button>
   </div>
 
   <div class="main">
-    <h1>Galeria de Fotos</h1>
-
-    <div class="carousel-container">
-      <div class="carousel-slide" id="carousel">
-        <div class="carousel-page">
-          <img src="img/foto1.png" alt="Foto 1" />
-          <img src="img/foto1.png" alt="Foto 2" />
-        </div>
-        <div class="carousel-page">
-          <img src="img/foto1.png" alt="Foto 3" />
-          <img src="img/foto1.png" alt="Foto 4" />
-        </div>
-        <div class="carousel-page">
-          <img src="img/foto5.jpg" alt="Foto 5" />
-          <img src="img/foto6.jpg" alt="Foto 6" />
-        </div>
+    <h1>Galeria de Imagens</h1>
+    <div class="carousel">
+      <button class="carousel-btn left" onclick="moveCarousel(-1)">‹</button>
+      <div class="carousel-track" id="carousel-track">
+        <div class="carousel-item"><img src="img/Flavia.png" alt="Foto 1" onclick="openModal(this.src)" /></div>
+        <div class="carousel-item"><img src="img/Carla.png" alt="Foto 2" onclick="openModal(this.src)" /></div>
+        <div class="carousel-item"><img src="img/Welington.png" alt="Foto 3" onclick="openModal(this.src)" /></div>
+        <div class="carousel-item"><img src="img/Luciana.png" alt="Foto 4" onclick="openModal(this.src)" /></div>
+        <!-- Adicione mais imagens aqui -->
       </div>
+      <button class="carousel-btn right" onclick="moveCarousel(1)">›</button>
     </div>
+  </div>
 
-    <div class="carousel-buttons">
-      <button onclick="prevSlide()">⟨ Anterior</button>
-      <button onclick="nextSlide()">Próxima ⟩</button>
-    </div>
+  <div id="modal" onclick="this.style.display='none'">
+    <img id="modal-img" src="" alt="Imagem ampliada">
   </div>
 
   <div id="rodape">
@@ -60,34 +54,33 @@
       navMenu.classList.toggle('show');
     });
 
-    navMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navMenu.classList.remove('show'));
-    });
-
     const darkModeBtn = document.getElementById('dark-mode-btn');
     darkModeBtn.addEventListener('click', () => {
       document.body.classList.toggle('dark');
     });
 
-    // Carrossel de páginas
-    const carousel = document.getElementById('carousel');
-    const totalPages = carousel.children.length;
-    let pageIndex = 0;
+    let index = 0;
+    function moveCarousel(direction) {
+      const track = document.getElementById('carousel-track');
+      const items = document.querySelectorAll('.carousel-item');
+      const totalItems = items.length;
+      const visibleItems = 2;
 
-    function showPage(i) {
-      pageIndex = (i + totalPages) % totalPages;
-      carousel.style.transform = `translateX(-${pageIndex * 100}%)`;
+      index += direction;
+      if (index < 0) index = 0;
+      if (index > totalItems - visibleItems) index = totalItems - visibleItems;
+
+      const offset = index * (100 / visibleItems);
+      track.style.transform = `translateX(-${offset}%)`;
     }
 
-    function nextSlide() {
-      showPage(pageIndex + 1);
+    function openModal(src) {
+      const modal = document.getElementById('modal');
+      const modalImg = document.getElementById('modal-img');
+      modal.style.display = 'flex';
+      modalImg.src = src;
     }
-
-    function prevSlide() {
-      showPage(pageIndex - 1);
-    }
-
-    setInterval(nextSlide, 10000); // troca automática a cada 10s
   </script>
+
 </body>
 </html>
