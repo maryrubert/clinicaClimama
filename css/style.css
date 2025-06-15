@@ -245,24 +245,31 @@
       z-index: 1000;
       width: 95%;
       max-width: 600px;
+      max-height: 90vh; /* Limita a altura total do popup */
       background: white;
       border-radius: 12px;
       padding: 2rem;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      overflow-y: auto; /* Adiciona a barra de rolagem se necessário */
     }
+
 
     body.dark .popup {
       background: #2a2a2a;
-      color: var(--cor-texto-dark);
+        color: var(--cor-texto-dark);
+     overflow-y: auto;
     }
+
 
     .popup-content h3 {
       margin-top: 0;
       color: var(--cor-principal);
+      text-align: center;
     }
 
     .popup-content ul {
       text-align: left;
+      color: var(--cor-texto);
       padding-left: 1.25rem;
       margin-top: 1rem;
     }
@@ -292,6 +299,7 @@
 
     .article-list li {
       margin-bottom: 1rem;
+      color: var(--cor-principal);
     }
 
     .article-list li a {
