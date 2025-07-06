@@ -1,8 +1,8 @@
 :root {
-      --cor-principal: #640043;
+      --cor-principal: #fcc7bf;
       --cor-secundaria: #ffd6ec;
       --cor-hover: #cc005f;
-      --cor-fundo: #f8f8f8;
+      --cor-fundo: #b2b09b;
       --cor-texto: #333;
       --cor-fundo-dark: #121212;
       --cor-texto-dark: #e0e0e0;
@@ -63,13 +63,18 @@
 
     #navigation ul li a {
       text-decoration: none;
-      color: white;
+      color: var(--cor-fundo);
       font-weight: bold;
       transition: color 0.3s;
     }
 
     #navigation ul li a:hover {
       color: var(--cor-secundaria);
+    }
+
+    body.dark #navigation {
+      background-color: var(--cor-fundo-dark);
+      border-color: #333;
     }
 
     .main {
@@ -117,18 +122,23 @@
       background-color: var(--cor-principal);
       padding: 1rem;
       text-align: center;
-      color: white;
+      color: var(--cor-fundo);
       font-size: 0.9rem;
     }
 
     #rodape a {
-      color: var(--cor-secundaria);
+      color: var(--cor-hover);
       text-decoration: none;
     }
 
     #rodape a:hover {
       text-decoration: underline;
     }
+
+    body.dark #rodape {
+  background-color: var(--cor-fundo-dark);
+  color: var(--cor-texto-dark);
+}
 
     @keyframes fadeIn {
       from {
@@ -175,8 +185,11 @@
     .main h2 {
       font-weight: 400;
       font-size: 1.25rem;
-      color: #555;
       text-align: center;
+    }
+
+    .main.dark h2 {
+      color: var(--cor-texto-dark);
     }
 
     .items {
@@ -187,7 +200,7 @@
     }
 
     .item {
-      background: white;
+      background-color: var(--cor-fundo);
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       cursor: pointer;
@@ -199,13 +212,15 @@
     }
 
     body.dark .item {
-      background: #2a2a2a;
+      background: var(--cor-fundo-dark);
     }
 
     .item:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     }
+
+
 
     .item img {
       width: 160px;
@@ -219,6 +234,10 @@
     .item h3 {
       margin-top: 1rem;
       font-size: 1.2rem;
+      color: var(--cor-hover);
+    }
+    
+    body.dark .item h3 {
       color: var(--cor-principal);
     }
 
@@ -245,7 +264,7 @@
       width: 95%;
       max-width: 600px;
       max-height: 90vh; /* Limita a altura total do popup */
-      background: white;
+      background: var(--cor-fundo);
       border-radius: 12px;
       padding: 2rem;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
@@ -254,23 +273,30 @@
 
 
     body.dark .popup {
-      background: #2a2a2a;
-        color: var(--cor-texto-dark);
-     overflow-y: auto;
+      background: var(--cor-fundo-dark);
+      overflow-y: auto;
     }
 
 
     .popup-content h3 {
       margin-top: 0;
-      color: var(--cor-principal);
+      color: var(--cor-hover);
       text-align: center;
     }
 
     .popup-content ul {
       text-align: left;
-      color: var(--cor-texto);
+      color: var(--cor-secundaria);
       padding-left: 1.25rem;
       margin-top: 1rem;
+    }
+
+    body.dark .popup-content h3 {
+      color: var(--cor-principal);
+    }
+
+    body.dark .popup-content ul {
+      color: var(--cor-texto-dark);
     }
 
     .close-btn {
@@ -298,11 +324,11 @@
 
     .article-list li {
       margin-bottom: 1rem;
-      color: var(--cor-principal);
+      color: var(--cor-texto);
     }
 
     .article-list li a {
-      color: var(--cor-principal);
+      color: var(--cor-texto);
       text-decoration: none;
       transition: color 0.3s;
     }
@@ -315,6 +341,26 @@
     body.dark .article-list li a {
       color: var(--cor-hover);
     }
+
+     #search-articles {
+      background-color: var(--cor-fundo);
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid var(--cor-secundaria);
+      box-sizing: border-box;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Dark mode para a barra de busca */
+    body.dark #search-articles {
+      background-color: var(--cor-fundo-dark);
+      color: #f1f1f1;
+      border: 1px solid #444;
+    }
+
 
     .carousel {
       display: flex;
@@ -424,3 +470,5 @@
       border: 0;
       display: block;
     }
+
+    

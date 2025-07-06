@@ -34,6 +34,9 @@
     <h1>Artigos</h1>
     <h2>Tenha acesso às publicações dos nossos profissionais</h2>
     <hr />
+
+    <input type="text" id="search-articles" placeholder="Buscar artigos...">
+
     <ul class="article-list">
       <li>
         <a href="https://ojs.brazilianjournals.com.br/ojs/index.php/BJHR/article/view/61571/44379" target="_blank" rel="noopener noreferrer">
@@ -141,6 +144,20 @@
         localStorage.setItem('darkMode', 'disabled');
       }
     });
+
+   // 🔍 Filtro da busca de artigos
+    const searchInput = document.getElementById('search-articles');
+    const articles = document.querySelectorAll('.article-list li');
+
+    searchInput.addEventListener('input', function () {
+      const searchTerm = this.value.toLowerCase();
+
+      articles.forEach(li => {
+        const text = li.textContent.toLowerCase();
+        li.style.display = text.includes(searchTerm) ? '' : 'none';
+      });
+    });
+    
   </script>
 </body>
 </html>
