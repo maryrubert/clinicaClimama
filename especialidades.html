@@ -7,21 +7,24 @@
   <title>Especialidades | CLIMAMA</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
-<link rel="shortcut icon" href="favicon/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-<link rel="manifest" href="favicon/site.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="shortcut icon" href="favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
   <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
-
- 
 </head>
+
 <body>
 
+  <!-- NAVIGATION -->
   <div id="navigation">
+    <div class="nav-left">
+    <img src="img/logo1.png" alt="Logo CLIMAMA" class="nav-logo">
+  </div>
     <button id="nav-toggle">☰</button>
     <ul id="nav-menu">
       <li><a href="index.html">Home</a></li>
-      <li><a href="especialidades.html">Especialidades</a></li>
+      <li><a href="especialidades.html" class="active">Especialidades</a></li>
       <li><a href="profissionais.html">Profissionais</a></li>
       <li><a href="artigos.html">Artigos</a></li>
       <li><a href="galeria.html">Galeria</a></li>
@@ -30,6 +33,7 @@
     <button id="dark-mode-btn">🌙</button>
   </div>
 
+  <!-- MAIN CONTENT -->
   <div class="main">
     <h1>Especialidades</h1>
     <div class="profile-section">
@@ -46,13 +50,17 @@
     </div>
   </div>
 
+  <!-- FOOTER -->
   <div id="rodape">
     © 2025 CLIMAMA - Todos os direitos reservados. Desenvolvido por <a href="https://github.com/maryrubert" target="_blank">MG Developer</a>.
   </div>
 
+  <!-- SCRIPTS -->
   <script>
     const toggleButton = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
+    const darkModeBtn = document.getElementById('dark-mode-btn');
+
     toggleButton.addEventListener('click', () => {
       navMenu.classList.toggle('show');
     });
@@ -61,7 +69,7 @@
       link.addEventListener('click', () => navMenu.classList.remove('show'));
     });
 
-    const darkModeBtn = document.getElementById('dark-mode-btn');
+    // Dark Mode
     if (localStorage.getItem('darkMode') === 'enabled') {
       document.body.classList.add('dark');
       darkModeBtn.textContent = '☀️';
