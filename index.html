@@ -6,14 +6,11 @@
   <meta name="keywords" content="ginecologia, mastologia, paaf" />
   <title>CLIMAMA</title>
 <link rel="stylesheet" href="css/style.css">
-<link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
-<link rel="shortcut icon" href="favicon/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-<link rel="manifest" href="favicon/site.webmanifest" />
+<link rel="icon" type="image/png" sizes="16x16"  href="/favicon/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
 <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
 
- 
 </head>
 <body>
 
@@ -24,7 +21,7 @@
     <button id="nav-toggle">☰</button>
     <ul id="nav-menu">
       <li><a href="index.html">Home</a></li>
-      <li><a href="especialidades.html">Especialidades</a></li>
+      <li><a href="especialidades.html">Procedimentos</a></li>
       <li><a href="profissionais.html">Profissionais</a></li>
       <li><a href="artigos.html">Artigos</a></li>
       <li><a href="galeria.html">Galeria</a></li>
@@ -32,14 +29,26 @@
     </ul>
     <button id="dark-mode-btn">🌙</button>
   </div>
+
   <!-- IMAGE CAROUSEL -->
 <div class="carousel-profile">
+
   <div class="carousel-pro">
-    <img src="img/galeria1.jpg" alt="Imagem 1">
-    <img src="img/galeria2.jpg" alt="Imagem 2">
-    <img src="img/galeria3.jpg" alt="Imagem 3">
+    <div class="slide active">
+      <img src="img\home1.jpg" alt="Imagem 1">
+    </div>
+    <div class="slide">
+      <img src="img\home2.jpg" alt="Imagem 2">
+    </div>
+    <div class="slide">
+      <img src="img\home3.jpg" alt="Imagem 3">
+    </div>
+    <div class="slide">
+      <img src="img\home4.jpg" alt="Imagem 4">
+    </div>
   </div>
 </div>
+
 
   <div class="main">
     <h1>20 anos de cuidado, confiança e compromisso com a saúde da mulher</h1>
@@ -90,6 +99,28 @@
         localStorage.setItem('darkMode', 'disabled');
       }
     });
-  </script>
+
+   // ===== SCRIPT DO CARROSSEL =====
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-pro .slide');
+    const totalSlides = slides.length;
+    const intervaloTroca = 6000; // tempo entre imagens (6s)
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      currentSlide++;
+      if (currentSlide >= totalSlides) {
+        currentSlide = 0; // volta para a primeira imagem
+      }
+      showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, intervaloTroca);
+
+</script>
 </body>
 </html>
