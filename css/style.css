@@ -459,31 +459,32 @@ body.dark ul.lista-quadrado li::before {
       text-decoration: underline;
     }
 
+    /* Container do carrossel */
     .carousel {
-      display: flex;
-      overflow: hidden;
       position: relative;
-      max-width: 700px;
+      width: 100%;          /* ocupa toda a largura da tela */        
+      overflow: hidden;
       margin: 0 auto;
     }
-
     .carousel-track {
       display: flex;
-      transition: transform 0.5s ease;
+      transition: transform 1s ease-in-out;
     }
 
-    .carousel-item {
-      min-width: 50%;
-      padding: 0.5rem;
-    }
+    /* Cada item do carrossel */
+.carousel-item {
+  flex: 0 0 50%;      /* duas imagens por vez */
+  box-sizing: border-box;
+  padding: 5px;       /* opcional: espaço entre as imagens */
+}
 
-    .carousel-item img {
-      width: 100%;
-      height: 240px;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
+/* Todas as imagens */
+.carousel-item img {
+  width: 100%;          /* ocupa toda a largura do item */
+  height: 300px;        /* altura fixa (ajuste como preferir) */
+  object-fit: cover;    /* corta o excesso e mantém proporção */
+  border-radius: 10px;  
+}
 
     .carousel-item img:hover {
       transform: scale(1.05);
