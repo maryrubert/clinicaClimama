@@ -66,33 +66,8 @@
     © 2025 CLIMAMA - Todos os direitos reservados. Desenvolvido por <a href="https://github.com/maryrubert" target="_blank" rel="noopener noreferrer">MG Developer</a>.
   </div>
 
-  <script>
-    const toggleButton = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    toggleButton.addEventListener('click', () => {
-      navMenu.classList.toggle('show');
-    });
+<!--Script-->
+<script src="js\script.js"></script>
 
-    navMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navMenu.classList.remove('show'));
-    });
-
-    const darkModeBtn = document.getElementById('dark-mode-btn');
-    if (localStorage.getItem('darkMode') === 'enabled') {
-      document.body.classList.add('dark');
-      darkModeBtn.textContent = '☀️';
-    }
-
-    darkModeBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      if (document.body.classList.contains('dark')) {
-        darkModeBtn.textContent = '☀️';
-        localStorage.setItem('darkMode', 'enabled');
-      } else {
-        darkModeBtn.textContent = '🌙';
-        localStorage.setItem('darkMode', 'disabled');
-      }
-    });
-  </script>
 </body>
 </html>

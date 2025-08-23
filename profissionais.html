@@ -119,65 +119,8 @@
    © 2025 CLIMAMA - Todos os direitos reservados. Desenvolvido por <a href="https://github.com/maryrubert" target="_blank">MG Developer</a>.
   </div>
 
-  <script>
-    const overlay = document.getElementById('overlay');
-    const popup = document.getElementById('popup');
-    const popupTitle = document.getElementById('popup-title');
-    const popupText = document.getElementById('popup-text');
+  <script src="js\profissionais.js"></script>
+  <script src="js\script.js"></script>
 
-    function openPopup(element) {
-      const title = element.getAttribute('data-title');
-      const description = JSON.parse(element.getAttribute('data-description'));
-      popupTitle.textContent = title;
-
-      let listHTML = '<ul>';
-      description.forEach(item => listHTML += `<li>${item}</li>`);
-      listHTML += '</ul>';
-
-      popupText.innerHTML = listHTML;
-      overlay.style.display = 'block';
-      popup.style.display = 'block';
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closePopup() {
-      overlay.style.display = 'none';
-      popup.style.display = 'none';
-      document.body.style.overflow = '';
-    }
-
-    overlay.addEventListener('click', closePopup);
-    document.addEventListener('keydown', (e) => {
-      if (e.key === "Escape" && popup.style.display === 'block') closePopup();
-    });
-
-    // Menu toggle
-    const toggleButton = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    toggleButton.addEventListener('click', () => {
-      navMenu.classList.toggle('show');
-    });
-
-    navMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navMenu.classList.remove('show'));
-    });
-
-    const darkModeBtn = document.getElementById('dark-mode-btn');
-    if (localStorage.getItem('darkMode') === 'enabled') {
-      document.body.classList.add('dark');
-      darkModeBtn.textContent = '☀️';
-    }
-
-    darkModeBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      if (document.body.classList.contains('dark')) {
-        darkModeBtn.textContent = '☀️';
-        localStorage.setItem('darkMode', 'enabled');
-      } else {
-        darkModeBtn.textContent = '🌙';
-        localStorage.setItem('darkMode', 'disabled');
-      }
-    });
-  </script>
 </body>
 </html>

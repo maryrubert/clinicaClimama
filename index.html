@@ -52,10 +52,12 @@
 
   <div class="main">
     <h1>20 anos de cuidado, confiança e compromisso com a saúde da mulher</h1>
+  <!--
     <div class="profile-section">
       <div class="profile-image">
         <img src="img/logo1.png" alt="Logo da CLIMAMA">
       </div>
+  -->   
       <div class="profile-text">
         <p>Há duas décadas, nasceu um sonho: o de construir um espaço onde cada mulher pudesse encontrar acolhimento, respeito e excelência no cuidado com sua saúde. Hoje, celebramos 20 anos da Climama, referência no cuidado especializado das mamas e na atenção integral à saúde feminina.</p>
         <p>Foram anos de conquistas, aprendizados e evolução constante. Ao longo desse tempo, acompanhamos gerações de mulheres — mães, filhas, avós — oferecendo não apenas diagnósticos precisos e tratamentos atualizados, mas também escuta sensível, orientação humana e presença verdadeira em todos os momentos da jornada.</p>
@@ -72,55 +74,8 @@
 
   <!--Script-->
 
-  <script>
-    const toggleButton = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    toggleButton.addEventListener('click', () => {
-      navMenu.classList.toggle('show');
-    });
+<script src="js\index.js"></script>
+<script src="js\script.js"></script>
 
-    navMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navMenu.classList.remove('show'));
-    });
-
-    const darkModeBtn = document.getElementById('dark-mode-btn');
-    if (localStorage.getItem('darkMode') === 'enabled') {
-      document.body.classList.add('dark');
-      darkModeBtn.textContent = '☀️';
-    }
-
-    darkModeBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      if (document.body.classList.contains('dark')) {
-        darkModeBtn.textContent = '☀️';
-        localStorage.setItem('darkMode', 'enabled');
-      } else {
-        darkModeBtn.textContent = '🌙';
-        localStorage.setItem('darkMode', 'disabled');
-      }
-    });
-
-   // ===== SCRIPT DO CARROSSEL =====
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.carousel-pro .slide');
-    const totalSlides = slides.length;
-    const intervaloTroca = 6000; // tempo entre imagens (6s)
-
-    function showSlide(index) {
-      slides.forEach(slide => slide.classList.remove('active'));
-      slides[index].classList.add('active');
-    }
-
-    function nextSlide() {
-      currentSlide++;
-      if (currentSlide >= totalSlides) {
-        currentSlide = 0; // volta para a primeira imagem
-      }
-      showSlide(currentSlide);
-    }
-
-    setInterval(nextSlide, intervaloTroca);
-
-</script>
 </body>
 </html>

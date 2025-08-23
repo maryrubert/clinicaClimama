@@ -166,8 +166,8 @@
 
     .profile-text {
       flex: 1;
-      min-width: 280px;
-      max-width: 600px;
+      /* min-width: 280px; 
+      max-width: 600px; */
     }
 
     .profile-text p {
