@@ -4,40 +4,46 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="keywords" content="ginecologia, mastologia, paaf" />
-  <title>CLIMAMA - Profissionais</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" sizes="16x16"  href="/favicon/favicon-16x16.png">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
-  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+  <title>PROFISSIONAIS | CLIMAMA</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 
- 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
 </head>
 <body>
-
+  <!-- NAVIGATION -->
   <div id="navigation">
     <div class="nav-left">
-    <img src="img/logo1.png" alt="Logo CLIMAMA" class="nav-logo">
-  </div>
+      <img src="img/logo1.png" alt="Logo CLIMAMA" class="nav-logo" />
+    </div>
+
     <button id="nav-toggle">☰</button>
+
     <ul id="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="especialidades.html">Procedimentos</a></li>
-      <li><a href="profissionais.html">Profissionais</a></li>
+      <li><a href="profissionais.html" class="active">Profissionais</a></li>
       <li><a href="artigos.html">Artigos</a></li>
       <li><a href="galeria.html">Galeria</a></li>
       <li><a href="contato.html">Contato</a></li>
     </ul>
+
     <button id="dark-mode-btn">🌙</button>
   </div>
 
+  <!-- MAIN CONTENT -->
   <div class="main">
     <h1>Profissionais</h1>
     <h2>Conheça nossa equipe de mastologistas</h2>
 
+    <!-- POPUP -->
     <div class="overlay" id="overlay"></div>
     <div class="popup" id="popup">
       <div class="popup-content">
@@ -47,80 +53,89 @@
       </div>
     </div>
 
+    <!-- TEAM GRID -->
     <div class="items">
+      <!-- ITEM 1 -->
       <div class="item"
-        data-title="Dr. Welington Lombardi"
-        data-description='["CRM: 99874/SP","RQE: 25427", "RQE: 25428",
-        "Graduação em Medicina pela Universidade Federal do Triângulo Mineiro - UFTM",
-        "Residência Médica em Ginecologia e Obstetrícia pela Universidade Federal do Triângulo Mineiro - UFTM",
-        "Especialização em Mastologia pelo Hospital das Clínicas da Faculdade de Medicina de Ribeirão Preto - USP",
-        "Título de Especialista em Ginecologia e Obstetrícia pela Associação Médica Brasileira e Febrasgo (TEGO)",
-        "Título de Especialista em Mastologia pela Associação Médica Brasileira e Sociedade Brasileira de Mastologia (TEMA)",
-        "Título de Especialista em Patologia do Trato Genital Inferior e Colposcopia (TCQ)",
-        "Mestrado em Ciências Médicas pelo Hospital das Clínicas da Faculdade de Medicina de Ribeirão Preto - USP (Área de Concentração em Oncologia Ginecológica)",
-        "Doutorado em Ciências Médicas pelo Hospital das Clínicas da Faculdade de Medicina de Ribeirão Preto - USP (Área de Concentração em Mastologia)",
-        "Docente Titular da Cadeira de Ginecologia, Obstetrícia e Mastologia da Faculdade de Medicina da Universidade de Araraquara - UNIARA",
-        "Supervisor da Residência Médica em Ginecologia e Obstetrícia da Faculdade de Medicina da Universidade de Araraquara - UNIARA",
-        "Médico Mastologista do Ambulatório de Atenção Integral à Saúde da Mulher",
-        "Médico Mastologista do Serviço De Oncologia da Santa Casa de Araraquara/SP",
-        "Médico Mastologista da Clínica Climama - Araraquara/SP"
-        ]'
-        onclick="openPopup(this)">
-        <img src="img\Welington.png" alt="Dr. Welington Lombardi">
+           data-title="Dr. Welington Lombardi"
+           data-description='["CRM: 99874/SP","RQE: 25427", "RQE: 25428",
+           "Graduação em Medicina pela Universidade Federal do Triângulo Mineiro - UFTM",
+           "Residência Médica em Ginecologia e Obstetrícia pela Universidade Federal do Triângulo Mineiro - UFTM",
+           "Especialização em Mastologia pelo Hospital das Clínicas da Faculdade de Medicina de Ribeirão Preto - USP",
+           "Título de Especialista em Ginecologia e Obstetrícia pela Associação Médica Brasileira e Febrasgo (TEGO)",
+           "Título de Especialista em Mastologia pela Associação Médica Brasileira e Sociedade Brasileira de Mastologia (TEMA)",
+           "Título de Especialista em Patologia do Trato Genital Inferior e Colposcopia (TCQ)",
+           "Mestrado em Ciências Médicas pelo Hospital das Clínicas da Faculdade de Medicina de Ribeirão Preto - USP (Área de Concentração em Oncologia Ginecológica)",
+           "Doutorado em Ciências Médicas pelo Hospital das Clínicas da Faculdade de Medicina de Ribeirão Preto - USP (Área de Concentração em Mastologia)",
+           "Docente Titular da Cadeira de Ginecologia, Obstetrícia e Mastologia da Faculdade de Medicina da Universidade de Araraquara - UNIARA",
+           "Supervisor da Residência Médica em Ginecologia e Obstetrícia da Faculdade de Medicina da Universidade de Araraquara - UNIARA",
+           "Médico Mastologista do Ambulatório de Atenção Integral à Saúde da Mulher",
+           "Médico Mastologista do Serviço De Oncologia da Santa Casa de Araraquara/SP",
+           "Médico Mastologista da Clínica Climama - Araraquara/SP"
+           ]'
+           onclick="openPopup(this)">
+        <img src="img/Welington.png" alt="Dr. Welington Lombardi" />
         <h3>Dr. Welington</h3>
       </div>
 
+      <!-- ITEM 2 -->
       <div class="item"
-        data-title="Dra. Luciana Borges Lombardi"
-        data-description='["CRM: 99865/SP","RQE: 25420","RQE: 25421",
-        "Graduação em Médicina pela Universidade Federal do Triângulo Mineiro - UFTM",
-        "Residência Médica em Ginecologia e Obstetrícia pela Universidade Federal do Triângulo Mineiro - UFTM",
-        "Título de Especialista em Ginecologia e Obstetrícia pela Associação Médica Brasileira e Febrasgo (TEGO)",
-        "Título de Especialista em Mastologia pela Associação Médica Brasileira e Sociedade Brasileira de Mastologia (TEMA)",
-        "Título de Especialista em Patologia do Trato Genital Inferior e Colposcopia (TCQ)",
-        "Mestrado em Ciências Médicas pelo Hospital das Clínicas da Faculdade de Medicina de Ribeirão Preto - USP",
-        "Docente de Ginecologia, Obstetrícia e Mastologia da Faculdade de Medicina da Universidade de Araraquara - UNIARA",
-        "Médica Mastologista do Ambulatório de Atenção Integral à Saúde da Mulher",
-        "Médica Mastologista do Serviço de Oncologia da Santa Casa de Araraquara/SP",
-        "Médica Mastologista da Clínica Climama - Araraquara/SP"
-        ]'
-        onclick="openPopup(this)">
-        <img src="img/Luciana.png" alt="Dra. Luciana Lombardi">
+           data-title="Dra. Luciana Borges Lombardi"
+           data-description='["CRM: 99865/SP","RQE: 25420","RQE: 25421",
+           "Graduação em Médicina pela Universidade Federal do Triângulo Mineiro - UFTM",
+           "Residência Médica em Ginecologia e Obstetrícia pela Universidade Federal do Triângulo Mineiro - UFTM",
+           "Título de Especialista em Ginecologia e Obstetrícia pela Associação Médica Brasileira e Febrasgo (TEGO)",
+           "Título de Especialista em Mastologia pela Associação Médica Brasileira e Sociedade Brasileira de Mastologia (TEMA)",
+           "Título de Especialista em Patologia do Trato Genital Inferior e Colposcopia (TCQ)",
+           "Mestrado em Ciências Médicas pelo Hospital das Clínicas da Faculdade de Medicina de Ribeirão Preto - USP",
+           "Docente de Ginecologia, Obstetrícia e Mastologia da Faculdade de Medicina da Universidade de Araraquara - UNIARA",
+           "Médica Mastologista do Ambulatório de Atenção Integral à Saúde da Mulher",
+           "Médica Mastologista do Serviço de Oncologia da Santa Casa de Araraquara/SP",
+           "Médica Mastologista da Clínica Climama - Araraquara/SP"
+           ]'
+           onclick="openPopup(this)">
+        <img src="img/Luciana.png" alt="Dra. Luciana Lombardi" />
         <h3>Dra. Luciana</h3>
       </div>
+
+      <!-- ITEM 3 -->
       <div class="item"
-        data-title="Dra. Carla de Freitas"
-        data-description='["CRM: 207770/SP","RQE: 137693","RQE: 139379",
-        "Graduação em Medicina pela Universidade de Araraquara - UNIARA",
-        "Residência Médica em Ginecologia e Obstetrícia pela Santa Casa de Araraquara/SP",
-        "Especialista em Mastologia pela Escola Paulista de Medicina - EPM Unifesp",
-        "Médica Mastologista da Clínica Climama - Araraquara/SP"
-        ]'
-        onclick="openPopup(this)">
-        <img src="img/Carla.png" alt="Dra. Carla de Freitas">
+           data-title="Dra. Carla de Freitas"
+           data-description='["CRM: 207770/SP","RQE: 137693","RQE: 139379",
+           "Graduação em Medicina pela Universidade de Araraquara - UNIARA",
+           "Residência Médica em Ginecologia e Obstetrícia pela Santa Casa de Araraquara/SP",
+           "Especialista em Mastologia pela Escola Paulista de Medicina - EPM Unifesp",
+           "Médica Mastologista da Clínica Climama - Araraquara/SP"
+           ]'
+           onclick="openPopup(this)">
+        <img src="img/Carla.png" alt="Dra. Carla de Freitas" />
         <h3>Dra. Carla</h3>
       </div>
+
+      <!-- ITEM 4 -->
       <div class="item"
-        data-title="Dra. Flávia Vicentin Silva"
-        data-description='["CRM: 207864/SP", "RQE: 112940", "RQE: 135703",
-        "Graduação em Medicina pela Universidade de Araraquara - UNIARA",
-        "Residência Médica em Ginecologia e Obstetrícia pela Santa Casa de Araraquara/SP",
-        "Especialista em Mastologia pelo Hospital Amaral Carvalho de Jaú - HAC",
-        "Especialista em Oncoplastia e Reconstrução Mamária pela Sociedade Brasileira de Mastologia - SBM" 
-        ]'
-        onclick="openPopup(this)">
-        <img src="img/Flavia.png" alt="Dra. Flávia Vicentin Silva">
+           data-title="Dra. Flávia Vicentin Silva"
+           data-description='["CRM: 207864/SP", "RQE: 112940", "RQE: 135703",
+           "Graduação em Medicina pela Universidade de Araraquara - UNIARA",
+           "Residência Médica em Ginecologia e Obstetrícia pela Santa Casa de Araraquara/SP",
+           "Especialista em Mastologia pelo Hospital Amaral Carvalho de Jaú - HAC",
+           "Especialista em Oncoplastia e Reconstrução Mamária pela Sociedade Brasileira de Mastologia - SBM" 
+           ]'
+           onclick="openPopup(this)">
+        <img src="img/Flavia.png" alt="Dra. Flávia Vicentin Silva" />
         <h3>Dra. Flávia</h3>
       </div>
     </div>
   </div>
 
+  <!-- FOOTER -->
   <div id="rodape">
-   © 2025 CLIMAMA - Todos os direitos reservados. Desenvolvido por <a href="https://github.com/maryrubert" target="_blank">MG Developer</a>.
+    © 2025 CLIMAMA - Todos os direitos reservados. Desenvolvido por 
+    <a href="https://github.com/maryrubert" target="_blank">MG Developer</a>.
   </div>
 
-  <script src="js\profissionais.js"></script>
-  <script src="js\script.js"></script>
-
+  <!-- SCRIPTS -->
+  <script src="js/profissionais.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

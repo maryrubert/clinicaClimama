@@ -4,22 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="keywords" content="CLIMAMA, galeria, fotos, carrossel" />
-  <title>CLIMAMA</title>
+  <title>GALERIA | CLIMAMA</title>
+  
+  <!-- Estilos -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" sizes="16x16"  href="/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
-  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
 
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:wght@400;700&display=swap" rel="stylesheet" />
-  
 </head>
 <body>
-
+  
+  <!-- Navegação -->
   <div id="navigation">
     <div class="nav-left">
-    <img src="img/logo1.png" alt="Logo CLIMAMA" class="nav-logo">
-  </div>
+      <img src="img/logo1.png" alt="Logo CLIMAMA" class="nav-logo">
+    </div>
     <button id="nav-toggle">☰</button>
     <ul id="nav-menu">
       <li><a href="index.html">Home</a></li>
@@ -32,41 +35,72 @@
     <button id="dark-mode-btn">🌙</button>
   </div>
 
+  <!-- Conteúdo principal -->
   <div class="main">
     <h1>Galeria de Imagens</h1>
+    
+    <!-- Carrossel -->
     <div class="carousel">
       <button class="carousel-btn left" onclick="moveCarousel(-1)">‹</button>
+      
       <div class="carousel-track" id="carousel-track">
-        <div class="carousel-item"><img src="img/logorecepcao.jpeg" alt="Foto 1" onclick="openModal(this.src)" /></div>
-        <div class="carousel-item"><img src="img/fachada1.jpg" alt="Foto 2" onclick="openModal(this.src)" /></div>
-         <div class="carousel-item"><img src="img/fachada2.jpeg" alt="Foto 4" onclick="openModal(this.src)" /></div>
-        <div class="carousel-item"><img src="img/entrada1.jpeg" alt="Foto 3" onclick="openModal(this.src)" /></div>
-        <div class="carousel-item"><img src="img/recepcao1.jpg" alt="Foto 4" onclick="openModal(this.src)" /></div>
-        <div class="carousel-item"><img src="img/sala-w3.jpg" alt="Foto 4" onclick="openModal(this.src)" /></div>
-        <div class="carousel-item"><img src="img/sala-w1.jpg" alt="Foto 4" onclick="openModal(this.src)" /></div>
-        <div class="carousel-item"><img src="img/exame1.jpg" alt="Foto 4" onclick="openModal(this.src)" /></div>
-        <div class="carousel-item"><img src="img/sala-l3.jpg" alt="Foto 4" onclick="openModal(this.src)" /></div>
-        <div class="carousel-item"><img src="img/sala-l4.jpg" alt="Foto 4" onclick="openModal(this.src)" /></div>
-        <div class="carousel-item"><img src="img/sala.jpeg" alt="Foto 4" onclick="openModal(this.src)" /></div>
-         <div class="carousel-item"><img src="img/placas.jpeg" alt="Foto 4" onclick="openModal(this.src)" /></div>
+        <div class="carousel-item">
+          <img src="img/logorecepcao.jpeg" alt="Foto 1" onclick="openModal(this.src)" />
+        </div>
+        <div class="carousel-item">
+          <img src="img/fachada1.jpg" alt="Foto 2" onclick="openModal(this.src)" />
+        </div>
+        <div class="carousel-item">
+          <img src="img/fachada2.jpeg" alt="Foto 3" onclick="openModal(this.src)" />
+        </div>
+        <div class="carousel-item">
+          <img src="img/entrada1.jpeg" alt="Foto 4" onclick="openModal(this.src)" />
+        </div>
+        <div class="carousel-item">
+          <img src="img/recepcao1.jpg" alt="Foto 5" onclick="openModal(this.src)" />
+        </div>
+        <div class="carousel-item">
+          <img src="img/sala-w3.jpg" alt="Foto 6" onclick="openModal(this.src)" />
+        </div>
+        <div class="carousel-item">
+          <img src="img/sala-w1.jpg" alt="Foto 7" onclick="openModal(this.src)" />
+        </div>
+        <div class="carousel-item">
+          <img src="img/exame1.jpg" alt="Foto 8" onclick="openModal(this.src)" />
+        </div>
+        <div class="carousel-item">
+          <img src="img/sala-l3.jpg" alt="Foto 9" onclick="openModal(this.src)" />
+        </div>
+        <div class="carousel-item">
+          <img src="img/sala-l4.jpg" alt="Foto 10" onclick="openModal(this.src)" />
+        </div>
+        <div class="carousel-item">
+          <img src="img/sala.jpeg" alt="Foto 11" onclick="openModal(this.src)" />
+        </div>
+        <div class="carousel-item">
+          <img src="img/placas.jpeg" alt="Foto 12" onclick="openModal(this.src)" />
+        </div>
         <!-- Adicione mais imagens aqui -->
       </div>
+      
       <button class="carousel-btn right" onclick="moveCarousel(1)">›</button>
     </div>
   </div>
 
+  <!-- Modal -->
   <div id="modal" onclick="this.style.display='none'">
     <img id="modal-img" src="" alt="Imagem ampliada">
   </div>
 
+  <!-- Rodapé -->
   <div id="rodape">
-    © 2025 CLIMAMA - Todos os direitos reservados. Desenvolvido por <a href="https://github.com/maryrubert" target="_blank">MG Developer</a>.
+    © 2025 CLIMAMA - Todos os direitos reservados. Desenvolvido por 
+    <a href="https://github.com/maryrubert" target="_blank">MG Developer</a>.
   </div>
 
-<!--Script-->
-
-<script src="js\galeria.js"></script>
-<script src="js\script.js"></script>
+  <!-- Scripts -->
+  <script src="js/galeria.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>

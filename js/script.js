@@ -1,26 +1,29 @@
 const toggleButton = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    toggleButton.addEventListener('click', () => {
-      navMenu.classList.toggle('show');
-    });
+const navMenu = document.getElementById('nav-menu');
 
-    navMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navMenu.classList.remove('show'));
-    });
+toggleButton.addEventListener('click', () => {
+  navMenu.classList.toggle('show');
+});
 
-    const darkModeBtn = document.getElementById('dark-mode-btn');
-    if (localStorage.getItem('darkMode') === 'enabled') {
-      document.body.classList.add('dark');
-      darkModeBtn.textContent = '☀️';
-    }
+navMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => navMenu.classList.remove('show'));
+});
 
-    darkModeBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      if (document.body.classList.contains('dark')) {
-        darkModeBtn.textContent = '☀️';
-        localStorage.setItem('darkMode', 'enabled');
-      } else {
-        darkModeBtn.textContent = '🌙';
-        localStorage.setItem('darkMode', 'disabled');
-      }
-    });
+const darkModeBtn = document.getElementById('dark-mode-btn');
+
+if (localStorage.getItem('darkMode') === 'enabled') {
+  document.body.classList.add('dark');
+  darkModeBtn.textContent = '☀️';
+}
+
+darkModeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+
+  if (document.body.classList.contains('dark')) {
+    darkModeBtn.textContent = '☀️';
+    localStorage.setItem('darkMode', 'enabled');
+  } else {
+    darkModeBtn.textContent = '🌙';
+    localStorage.setItem('darkMode', 'disabled');
+  }
+});
