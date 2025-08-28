@@ -1,7 +1,8 @@
 :root {
-  --cor-principal: #E8B4BC;
+  --cor-principal: #F7CFD8;
   --cor-secundaria: #8A8883;
   --cor-hover: #F5E3E0;
+  --cor-link: #F7A5A5;
   --cor-fundo: #8A8883;
   --cor-texto: #121212;
   --cor-fundo-dark: #121212;
@@ -71,6 +72,7 @@ body {
 }
 
 #navigation ul li a {
+  font-size: 1.2rem;
   text-decoration: none;
   color: var(--cor-secundaria);
   font-weight: bold;
@@ -125,6 +127,7 @@ body {
   }
 }
 
+
 /* ===== Carrossel Perfil ===== */
 .carousel-profile {
   width: 100%;
@@ -177,6 +180,14 @@ body {
   font-size: 1.2rem;
   color: var(--cor-texto);
   text-align: center;
+  margin-bottom: 1rem;
+}
+
+.profile-text h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--cor-principal);
+  text-align: left;
   margin-bottom: 1rem;
 }
 
@@ -361,9 +372,9 @@ ul.lista-quadrado li::before {
 
 .year-toggle {
   font-size: 1.25rem;
-  color: var(--cor-principal);
+  color: var(--cor-link);
   margin: 1rem 0 0.25rem 0;
-  border-left: 4px solid var(--cor-principal);
+  border-left: 4px solid var(--cor-link);
   padding-left: 0.5rem;
   cursor: pointer;
   user-select: none;
@@ -387,7 +398,7 @@ ul.lista-quadrado li::before {
 }
 
 .article-list {
-  list-style: none;
+  color: var(--cor-link);
   margin: 0 0 1rem 0;
   padding-left: 1rem;
   max-height: 0;
