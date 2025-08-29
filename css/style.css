@@ -556,6 +556,14 @@ body.dark {
   color: var(--cor-texto-dark);
 }
 
+body.dark #navigation {
+  background-color: var(--cor-fundo-dark);
+}
+
+body.dark #rodape {
+  background-color: var(--cor-fundo-dark);
+}
+
 body.dark ul.lista-quadrado li {
   color: var(--cor-texto-dark);
 }
