@@ -1,5 +1,5 @@
 :root {
-  --cor-principal: #F7CFD8;
+  --cor-principal: #F7C5C6;
   --cor-secundaria: #8A8883;
   --cor-hover: #F5E3E0;
   --cor-link: #F7A5A5;
@@ -169,7 +169,7 @@ body {
 }
 
 .main h1 {
-  font-size: 2rem;
+  font-size: 1.9rem;
   color: var(--cor-principal);
   text-align: center;
   margin-bottom: 0.5rem;
@@ -185,7 +185,7 @@ body {
 
 .profile-text h2 {
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--cor-principal);
   text-align: left;
   margin-bottom: 1rem;
@@ -215,8 +215,43 @@ body {
   margin-bottom: 1rem;
   text-align: justify;
   text-indent: 1.5rem;
-  font-size: 1.05rem;
+  font-size: 1.02rem;
 }
+
+.especialista {
+  margin-bottom: 2rem;
+}
+
+.especialista h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.especialista .crm {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-left: 8px;
+  color: #2a2a2a;
+}
+
+.especialidades strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+.especialidades ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.especialidades ul ul {
+  list-style-type: circle; /* subitem diferente */
+  margin-left: 20px;
+  font-size: 0.95rem;
+  color: #2a2a2a;
+}
+
 
 /* ===== Rodapé ===== */
 #rodape {
