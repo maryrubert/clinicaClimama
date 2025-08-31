@@ -54,7 +54,7 @@ git clone https://github.com/maryrubert/clinicaClimama.git
 cd climama
 ```
 
-3. Instale as dependências (se houver):
+3. Instale as dependências:
 
 ```bash
 npm install
@@ -128,6 +128,8 @@ galeria.html              # Clinic photo gallery
 contato.html              # Contacts, address, Instagram link
 ...
 
+...
+
 🚀 Running Locally
 
 Clone this repository:
@@ -140,9 +142,11 @@ Navigate into the project folder:
 cd climama
 
 
-Install dependencies (if any):
+
+Install dependencies:
 
 npm install
+
 
 
 Start the project:
