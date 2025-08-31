@@ -72,8 +72,8 @@ npm start
 
 Caso queira contribuir ou relatar algum problema, entre em contato:
 
-* E-mail: [climamaclinica@gmail.com](mailto:climamaclinica@gmail.com)
-* Site: [www.clinicaginecomasto.com.br](http://www.clinicaginecomasto.com.br)
+* E-mail: [Climama](mailto:climamaclinica@gmail.com)
+* Site: [Climama](http://www.climama.med.br)
 * Instagram: [@climama.med](https://instagram.com/climama.med)
 
 ## 📄 Licença
