@@ -1,4 +1,4 @@
-# climama
+# CLIMAMA
 ---
 
 # 🌸 Clínica Ginecológica Especializada em Mastologia
@@ -79,5 +79,88 @@ Caso queira contribuir ou relatar algum problema, entre em contato:
 ## 📄 Licença
 
 Este projeto foi desenvolvido por MG Developer
+
+------------------------------------------------------------------
+# Climama
+---
+🌸 Specialized Gynecology & Mastology Clinic
+
+This is the official repository of the Climama website.
+The project provides information about the clinic’s services, medical staff, location, and contact options.
+It also aims to raise awareness about women’s health, especially the prevention and early detection of breast cancer.
+
+🩺 About the Clinic
+
+Climama specializes in comprehensive women’s healthcare, with a focus on gynecology and mastology.
+Our highly qualified team is dedicated to offering personalized care, accurate diagnoses, and up-to-date treatments.
+
+💡 Website Features
+
+Homepage with institutional information
+
+Services section
+
+Medical staff profiles
+
+News & articles about women’s health
+
+Interactive map with clinic location
+
+🌐 Tech Stack
+
+Frontend: HTML5, CSS3, JavaScript
+
+Features: Dark mode, responsive layout, carousel, pop-ups
+
+📁 Project Structure
+/css
+  └── style               # Main stylesheet
+/img                      # Website images
+/favicon                  # Favicon
+/js                       # Responsiveness, dark mode, carousel, pop-up
+/styles                   # Additional stylesheets
+README.md                 # This file
+index.html                # Homepage (clinic’s history and mission)
+especialidades.html       # Services and procedures
+profissionais.html        # Medical staff profiles
+artigos.html              # Published articles
+galeria.html              # Clinic photo gallery
+contato.html              # Contacts, address, Instagram link
+...
+
+🚀 Running Locally
+
+Clone this repository:
+
+git clone https://github.com/maryrubert/clinicaClimama.git
+
+
+Navigate into the project folder:
+
+cd climama
+
+
+Install dependencies (if any):
+
+npm install
+
+
+Start the project:
+
+npm start
+
+📬 Contact
+
+Want to contribute or report an issue? Reach out:
+
+📧 Email: climamaclinica@gmail.com
+
+🌐 Website: www.climama.med.br
+
+📸 Instagram: @climama.med
+
+📄 License
+
+Developed by MG Developer.
 
 
