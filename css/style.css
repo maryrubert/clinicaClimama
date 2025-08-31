@@ -223,12 +223,12 @@ body {
 }
 
 .especialista h3 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
 .especialista .crm {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: normal;
   margin-left: 8px;
   color: #2a2a2a;
@@ -248,7 +248,7 @@ body {
 .especialidades ul ul {
   list-style-type: circle; /* subitem diferente */
   margin-left: 20px;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: #2a2a2a;
 }
 
@@ -530,6 +530,12 @@ ul.lista-quadrado li::before {
   display: flex;
 }
 
+/* ===== Telefones clicáveis ===== */
+a[href^="tel:"] {
+  color: inherit;             /* herda a cor do texto */
+  text-decoration: none; /* mantém só o grifado */
+}
+
 /* ===== Redes sociais ===== */
 .social-links {
   margin-top: 1.5rem;
@@ -593,6 +599,14 @@ body.dark {
 
 body.dark #navigation {
   background-color: var(--cor-fundo-dark);
+}
+
+body.dark .especialista .crm{
+  color: var(--cor-texto-dark);
+}
+
+body.dark .especialidades ul ul{
+  color: var(--cor-texto-dark);
 }
 
 body.dark #rodape {
