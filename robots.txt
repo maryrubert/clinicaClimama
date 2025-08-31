@@ -1,0 +1,6 @@
+# Permite que todos os buscadores rastreiem o site
+User-agent: *
+Allow: /
+
+# Indica o sitemap principal
+Sitemap: https://climama.med.br/sitemap.xml
