@@ -263,8 +263,9 @@ body {
 }
 
 #rodape a {
-  color: var(--cor-hover);
+  color: #FF90BB;
   text-decoration: none;
+  font-weight: bold;
 }
 
 #rodape a:hover {
