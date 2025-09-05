@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Página inicial -->
   <url>
-    <loc>https://climama.med.br/</loc>
+    <loc>https://climama.med.br/index.html</loc>
     <lastmod>2025-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -24,9 +24,25 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Serviços (exemplo, ajuste conforme suas páginas reais) -->
+  <!-- Serviços -->
   <url>
-    <loc>https://climama.med.br/servicos.html</loc>
+    <loc>https://climama.med.br/especialidades.html</loc>
+    <lastmod>2025-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Artigos -->
+  <url>
+    <loc>https://climama.med.br/artigos.html</loc>
+    <lastmod>2025-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Galeria -->
+  <url>
+    <loc>https://climama.med.br/galeria.html</loc>
     <lastmod>2025-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
