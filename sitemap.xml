@@ -16,35 +16,4 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Contato -->
-  <url>
-    <loc>https://climama.med.br/contato.html</loc>
-    <lastmod>2025-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Serviços -->
-  <url>
-    <loc>https://climama.med.br/especialidades.html</loc>
-    <lastmod>2025-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Artigos -->
-  <url>
-    <loc>https://climama.med.br/artigos.html</loc>
-    <lastmod>2025-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Galeria -->
-  <url>
-    <loc>https://climama.med.br/galeria.html</loc>
-    <lastmod>2025-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-</urlset>
+  </urlset>
