@@ -3,7 +3,7 @@
   --cor-secundaria: #121212;
   --cor-hover: #F5E3E0;
   --cor-link: #121212;
-  --cor-fundo: ##F0C9C4;
+  --cor-fundo: #F0C9C4;
   --cor-texto: #121212;
   --cor-fundo-dark: #121212;
   --cor-texto-dark: #efeff0;
@@ -25,7 +25,7 @@ body {
 
 /* ===== Navegação ===== */
 #navigation {
-  background-color: var(--cor-fundo);
+  background-color: #ffff;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -41,7 +41,7 @@ body {
 }
 
 .nav-logo {
-  height: 40px;
+  height: 60px;
   margin-right: 10px;
 }
 
@@ -72,7 +72,7 @@ body {
 }
 
 #navigation ul li a {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   text-decoration: none;
   color: var(--cor-secundaria);
   transition: color 0.3s;
@@ -97,7 +97,7 @@ body {
 
 @media (max-width: 700px) {
   #nav-toggle {
-    display: block;
+  display: block;
   }
 
   #navigation ul {
@@ -150,7 +150,7 @@ body {
 
 .carousel-pro .slide img {
   width: 100%;
-  height: auto;
+  height: 480px;
   display: block;
 }
 
@@ -169,7 +169,7 @@ body {
 
 .main h1 {
   font-weight: 400;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   color: var(--cor-texto);
   text-align: center;
   margin-bottom: 1rem;
@@ -203,7 +203,7 @@ body {
 .profile-image img {
   width: 100%;
   max-width: 28rem;
-  border-radius: 0.7rem;
+  border-radius: 10rem;
   margin-top: 7rem;
 }
 
@@ -255,7 +255,7 @@ body {
 
 /* ===== Rodapé ===== */
 #rodape {
-  background-color: var(--cor-principal);
+  background-color: #ffff;
   padding: 1rem;
   text-align: center;
   color: var(--cor-secundaria);
@@ -365,7 +365,7 @@ ul.lista-quadrado li::before {
   width: 95%;
   max-width: 600px;
   max-height: 90vh;
-  background: var(--cor-fundo);
+  background: #8F8D88;
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
@@ -547,7 +547,7 @@ a[href^="tel:"] {
 
 .social-links a {
   display: inline-block;
-  background-color: var(--cor-principal);
+  background-color: #ffff;
   color: var(--cor-secundaria);
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
@@ -602,6 +602,10 @@ body.dark #navigation {
   background-color: var(--cor-fundo-dark);
 }
 
+body.dark #navigation ul li a {
+  color: var(--cor-texto-dark);
+}
+
 body.dark .especialista .crm{
   color: var(--cor-texto-dark);
 }
@@ -639,7 +643,7 @@ body.dark .popup {
 }
 
 body.dark .popup-content h3 {
-  color: var(--cor-secundaria);
+  color: var(--cor-texto-dark);
 }
 
 body.dark .popup-content ul {
@@ -647,5 +651,9 @@ body.dark .popup-content ul {
 }
 
 body.dark .close-btn {
-  color: var(--cor-secundaria);
+  color: var(--cor-texto-dark);
+}
+
+body.dark #rodape {
+  color: var(--cor-texto-dark)
 }
