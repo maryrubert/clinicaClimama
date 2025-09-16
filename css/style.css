@@ -365,7 +365,7 @@ ul.lista-quadrado li::before {
   width: 95%;
   max-width: 600px;
   max-height: 90vh;
-  background: #8F8D88;
+  background: #787878;
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
@@ -606,6 +606,10 @@ body.dark #navigation ul li a {
   color: var(--cor-texto-dark);
 }
 
+body.dark  .main h1 {
+  color: var(--cor-texto-dark);
+}
+
 body.dark .especialista .crm{
   color: var(--cor-texto-dark);
 }
@@ -635,7 +639,7 @@ body.dark .item {
 }
 
 body.dark .item h3 {
-  color: var(--cor-secundaria);
+  color: var(--cor-texto-dark);
 }
 
 body.dark .popup {
