@@ -130,6 +130,7 @@ body {
 /* ===== Carrossel Perfil ===== */
 .carousel-profile {
   width: 100%;
+  margin: auto;
   overflow: hidden;
   position: relative;
 }
@@ -145,19 +146,58 @@ body {
   left: 0;
   width: 100%;
   opacity: 0;
-  transition: opacity 4s ease-in-out;
+  transition: opacity 2s ease-in-out;
 }
 
 .carousel-pro .slide img {
-  width: 100%;
-  height: 480px;
+  width: 100%;      /* sempre ocupa toda a largura */
+  height: auto;     /* altura proporcional */
+  max-height: 450px; /* limite opcional, ajuste como quiser */
+  object-fit: cover; /* cobre toda a largura sem distorcer */
   display: block;
+  border-radius: 8px;
 }
 
 .carousel-pro .slide.active {
   opacity: 1;
   z-index: 1;
   position: relative;
+}
+
+/* ===== Legenda ===== */
+.carousel-pro .caption {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #121212;
+  text-align: center;
+  max-width: 80%;
+
+ /* Contorno superior */
+  border-top: 5px solid #F0C9C4; /* cor e espessura do contorno */
+}
+
+/* Telas médias (tablets) */
+@media (max-width: 992px) {
+  .carousel-pro .caption {
+    font-size: 1.2rem;
+    padding: 8px 14px;
+  }
+}
+
+/* Telas pequenas (celulares) */
+@media (max-width: 768px) {
+  .carousel-pro .caption {
+    font-size: 1rem;
+    padding: 6px 10px;
+    max-width: 60%; /* mais espaço em telas pequenas */
+  }
 }
 
 /* ===== Main / Perfil ===== */
@@ -467,21 +507,23 @@ ul.lista-quadrado li::before {
 
 .carousel-track {
   display: flex;
-  transition: transform 1s ease-in-out;
+  transition: transform 0.6s ease-in-out;
 }
 
 .carousel-item {
-  flex: 0 0 50%;
+  flex: 0 0 100%; /* 1 item por vez */
   box-sizing: border-box;
-  padding: 5px;
+  padding: 0; /* remove padding extra */
 }
 
 .carousel-item img {
   width: 100%;
-  height: 550px;
+  height: 100%;
+  max-height: 400px;
   object-fit: cover;
   border-radius: 10px;
 }
+
 
 .carousel-item img:hover {
   transform: scale(1.05);
@@ -506,6 +548,18 @@ ul.lista-quadrado li::before {
 
 .carousel-btn.right {
   right: 0;
+}
+
+/* Em telas grandes: 2 itens lado a lado */
+@media (min-width: 992px) {
+  .carousel-item {
+    flex: 0 0 50%; /* largura exata de metade da tela */
+    padding-right: 10px; /* espaço entre os itens */
+  }
+
+  .carousel-item:last-child {
+    padding-right: 0; /* remove o padding do último item */
+  }
 }
 
 /* ===== Modal ===== */

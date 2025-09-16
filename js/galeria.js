@@ -4,7 +4,9 @@ function moveCarousel(direction) {
   const track = document.getElementById('carousel-track');
   const items = document.querySelectorAll('.carousel-item');
   const totalItems = items.length;
-  const visibleItems = 2;
+
+  // Detecta quantos itens devem aparecer
+  let visibleItems = window.innerWidth < 992 ? 1 : 2; // 1 em telas pequenas, 2 em grandes
 
   index += direction;
   if (index < 0) index = 0;
@@ -20,3 +22,9 @@ function openModal(src) {
   modal.style.display = 'flex';
   modalImg.src = src;
 }
+
+window.addEventListener("resize", () => {
+  // Reajusta ao mudar o tamanho da tela
+  moveCarousel(0);
+});
+
