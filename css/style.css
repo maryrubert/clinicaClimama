@@ -54,6 +54,7 @@ body {
   color: var(--cor-secundaria);
   cursor: pointer;
   display: none;
+  margin-left: 1.5rem;
 }
 
 #dark-mode-btn {
@@ -91,6 +92,7 @@ body {
     flex-direction: column;
     display: none;
     width: 100%;
+    align-items: center;
   }
 
   #nav-menu.show {
@@ -106,6 +108,7 @@ body {
   #navigation ul {
     flex-direction: column;
     gap: 0;
+
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s;
@@ -655,6 +658,10 @@ body.dark {
 
 body.dark #navigation {
   background-color: var(--cor-fundo-dark);
+}
+
+body.dark #nav-toggle{
+  color: var(--cor-texto-dark);
 }
 
 body.dark #navigation ul li a {
