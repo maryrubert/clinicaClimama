@@ -26,13 +26,15 @@ body {
 /* ===== Navegação ===== */
 #navigation {
   background-color: #ffff;
-  padding: 1rem 2rem;
+  margin-bottom: 0;
+  padding: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-top: 5px solid var(--cor-fundo); 
 }
 
 .nav-left {
@@ -41,8 +43,8 @@ body {
 }
 
 .nav-logo {
-  height: 60px;
-  margin-right: 10px;
+  height: 100px;
+  margin-left: 1rem;
 }
 
 #nav-toggle {
@@ -60,7 +62,7 @@ body {
   font-size: 1.2rem;
   color: var(--cor-principal);
   cursor: pointer;
-  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 #navigation ul {
@@ -75,6 +77,7 @@ body {
   font-size: 0.9rem;
   text-decoration: none;
   color: var(--cor-secundaria);
+  font-weight: bold;
   transition: color 0.3s;
 }
 
@@ -178,9 +181,7 @@ body {
   color: #121212;
   text-align: center;
   max-width: 80%;
-
- /* Contorno superior */
-  border-top: 5px solid #F0C9C4; /* cor e espessura do contorno */
+  border-top: 5px solid var(--cor-fundo); /* cor e espessura do contorno */
 }
 
 /* Telas médias (tablets) */
@@ -405,7 +406,7 @@ ul.lista-quadrado li::before {
   width: 95%;
   max-width: 600px;
   max-height: 90vh;
-  background: #787878;
+  background: #A2AF9B;
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
