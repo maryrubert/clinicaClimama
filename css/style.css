@@ -289,12 +289,6 @@ body {
   margin-left: 20px;
 }
 
-.especialidades ul ul {
-  list-style-type: circle; /* subitem diferente */
-  margin-left: 20px;
-  font-size: 0.85rem;
-  color: #2a2a2a;
-}
 
 
 /* ===== Rodapé ===== */
@@ -321,6 +315,7 @@ ul.lista-quadrado {
   list-style: none;
   padding-left: 0;
   margin: 0;
+  text-align: justify;
 }
 
 ul.lista-quadrado li {
