@@ -679,12 +679,40 @@ body.dark #rodape {
   background-color: var(--cor-fundo-dark);
 }
 
+body.dark #search-articles {
+  border: 1px solid var(--cor-texto-dark);
+}
+
+body.dark .year-toggle {
+  color: var(--cor-texto-dark);
+  border-left: 4px solid var(--cor-texto-dark);
+}
+
+body.dark .year-toggle:hover {
+  color: var(--cor-hover);
+}
+
+
+body.dark .article-list {
+  color: var(--cor-texto-dark);
+}
+
+
+body.dark .article-list li a {
+  color: var(--cor-texto-dark);
+  
+}
+
+body.dark .article-list li a:hover {
+  color: var(--cor-hover);
+}
+
 body.dark ul.lista-quadrado li {
   color: var(--cor-texto-dark);
 }
 
 body.dark ul.lista-quadrado li::before {
-  color: var(--cor-secundaria);
+  color: var(--cor-texto-dark);
 }
 
 body.dark .main h2 {
